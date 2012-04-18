@@ -1,5 +1,5 @@
 version          "0.0.1"
 
-%w{apt postgresql}.each do |cb|
+%w{apt}.each do |cb|
 	depends cb
 end

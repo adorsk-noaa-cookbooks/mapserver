@@ -1,4 +1,4 @@
-include_recipe %w{apt postgresql}
+include_recipe %w{apt}
 
 # Add Ubuntu GIS repo.
 apt_repository "ubuntugis" do
@@ -6,7 +6,7 @@ apt_repository "ubuntugis" do
 	components ["main"]
 end
 
-package_name = 'postgresql-9.1-postgis'
+package_name = 'mapserver'
 package "#{package_name}" do
 	subscribes :run, resources(:execute => "apt-get update"), :immediately
 end
