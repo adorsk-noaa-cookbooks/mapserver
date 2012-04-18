@@ -10,3 +10,8 @@ package_name = 'mapserver'
 package "#{package_name}" do
 	subscribes :run, resources(:execute => "apt-get update"), :immediately
 end
+
+package_name = 'python-mapscript'
+package "#{package_name}" do
+	subscribes :run, resources(:execute => "apt-get update"), :immediately
+end
