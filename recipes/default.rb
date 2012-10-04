@@ -8,7 +8,3 @@ apt_repository "ubuntugis" do
     keyserver "keyserver.ubuntu.com"
     key "314DF160"
 end
-
-package "mapserver" do
-	subscribes :run, resources(:execute => "apt-get update"), :immediately
-end
